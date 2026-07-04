@@ -1,4 +1,4 @@
-module github.com/apache/answer-plugins/connector-basic
+module github.com/vinothsubramanian/answer-plugins/connector-basic
 
 go 1.23.0
 

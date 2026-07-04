@@ -36,7 +36,7 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/apache/answer-plugins/connector-basic/i18n"
+	"github.com/vinothsubramanian/answer-plugins/connector-basic/i18n"
 	"github.com/apache/answer-plugins/util"
 	"github.com/apache/answer/pkg/checker"
 	"github.com/apache/answer/plugin"
