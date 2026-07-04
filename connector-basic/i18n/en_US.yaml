@@ -31,6 +31,11 @@ plugin:
             other: Name
           description:
             other: Name of your connector which will be shown in the login page
+        issuer_url:
+          title:
+            other: Issuer URL
+          description:
+            other: "Optional. OIDC provider issuer URL (e.g. https://accounts.google.com). When set, Authorize URL, Token URL, and User JSON URL are discovered automatically from {issuer}/.well-known/openid-configuration. Manual URL fields below take precedence when both are provided."
         client_id:
           title:
             other: ClientID
@@ -45,17 +50,17 @@ plugin:
           title:
             other: Authorize URL
           description:
-            other: Authorize URL of your application
+            other: "Authorization endpoint of your OAuth2 provider. Optional when Issuer URL is set — overrides the discovered value when both are provided."
         token_url:
           title:
             other: Token URL
           description:
-            other: Token URL of your application
+            other: "Token endpoint of your OAuth2 provider. Optional when Issuer URL is set — overrides the discovered value when both are provided."
         user_json_url:
           title:
             other: User JSON URL
           description:
-            other: Get user info from this URL
+            other: "URL to fetch user info from using the access token. Optional when Issuer URL is set — overrides the discovered userinfo endpoint when provided."
         user_id_json_path:
           title:
             other: User ID JSON Path
@@ -101,3 +106,13 @@ plugin:
             other: Logo SVG
           description:
             other: "SVG of your application logo which format is base64"
+        enable_pkce:
+          title:
+            other: Enable PKCE
+          description:
+            other: "Enable Proof Key for Code Exchange (S256 method, RFC 7636). Recommended for public clients and required by some modern providers. When enabled, a code_verifier is generated per login and sent in the token exchange."
+        skip_tls_verify:
+          title:
+            other: Skip TLS Verification
+          description:
+            other: "Disable TLS certificate verification when communicating with the OAuth2/OIDC provider. Only enable for internal or development providers — never in production."

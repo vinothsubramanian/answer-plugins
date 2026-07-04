@@ -53,4 +53,14 @@ const (
 	ConfigScopeDescription                   = "plugin.basic_connector.backend.config.scope.description"
 	ConfigLogoSVGTitle                       = "plugin.basic_connector.backend.config.logo_svg.title"
 	ConfigLogoSVGDescription                 = "plugin.basic_connector.backend.config.logo_svg.description"
+
+	// OIDC discovery
+	ConfigIssuerURLTitle       = "plugin.basic_connector.backend.config.issuer_url.title"
+	ConfigIssuerURLDescription = "plugin.basic_connector.backend.config.issuer_url.description"
+
+	// Security
+	ConfigEnablePKCETitle          = "plugin.basic_connector.backend.config.enable_pkce.title"
+	ConfigEnablePKCEDescription    = "plugin.basic_connector.backend.config.enable_pkce.description"
+	ConfigSkipTLSVerifyTitle       = "plugin.basic_connector.backend.config.skip_tls_verify.title"
+	ConfigSkipTLSVerifyDescription = "plugin.basic_connector.backend.config.skip_tls_verify.description"
 )

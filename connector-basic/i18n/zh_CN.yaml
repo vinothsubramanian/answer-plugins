@@ -31,6 +31,11 @@ plugin:
             other: 名称
           description:
             other: 在登录页面上显示的连接器名称
+        issuer_url:
+          title:
+            other: Issuer URL
+          description:
+            other: "可选。OIDC 提供商的 Issuer URL（例如 https://accounts.google.com）。设置后，授权 URL、令牌 URL 和用户 JSON URL 将自动从 {issuer}/.well-known/openid-configuration 获取。手动填写的 URL 字段优先级更高。"
         client_id:
           title:
             other: 客户端ID
@@ -45,17 +50,17 @@ plugin:
           title:
             other: 授权URL
           description:
-            other: 您的应用程序的授权URL
+            other: "OAuth2 提供商的授权端点。设置 Issuer URL 时可选——同时提供时以此字段为准。"
         token_url:
           title:
             other: 令牌URL
           description:
-            other: 您的应用程序的令牌URL
+            other: "OAuth2 提供商的令牌端点。设置 Issuer URL 时可选——同时提供时以此字段为准。"
         user_json_url:
           title:
             other: 用户JSON URL
           description:
-            other: 从此URL获取用户信息
+            other: "使用访问令牌获取用户信息的 URL。设置 Issuer URL 时可选——提供时将覆盖自动发现的 userinfo 端点。"
         user_id_json_path:
           title:
             other: 用户ID JSON路径
@@ -101,3 +106,13 @@ plugin:
             other: 徽标SVG
           description:
             other: "应用程序徽标的SVG格式，格式为base64"
+        enable_pkce:
+          title:
+            other: 启用 PKCE
+          description:
+            other: "启用代码交换证明密钥（S256 方法，RFC 7636）。推荐用于公共客户端，部分现代提供商要求此功能。启用后，每次登录将生成 code_verifier 并在令牌交换时发送。"
+        skip_tls_verify:
+          title:
+            other: 跳过 TLS 验证
+          description:
+            other: "禁用与 OAuth2/OIDC 提供商通信时的 TLS 证书验证。仅限内部或开发环境使用，生产环境请勿开启。"
